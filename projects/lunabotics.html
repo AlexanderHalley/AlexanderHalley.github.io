@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunabotics Rover - Alexander Halley</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Alexander Halley</a></h1>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+            
+            <h1>Autonomous Lunar Rover</h1>
+            <p class="project-meta">Northwestern Space Technology And Rocketry Society | Software Lead</p>
+            
+            <div class="project-hero-image">
+                <!-- <img src="../images/projects/lunabotics-main.jpg" alt="Lunabotics Rover"> -->
+                <div class="placeholder-image">Rover Image Here</div>
+            </div>
+
+            <div class="project-description">
+                <h2>Overview</h2>
+                <p>
+                    Developing autonomous navigation and control systems for NASA's Lunabotics competition. 
+                    The rover must autonomously navigate simulated lunar terrain, excavate regolith, 
+                    and deposit it in designated zones - all without human intervention.
+                </p>
+
+                <h2>Technical Challenges</h2>
+                <ul>
+                    <li><strong>Autonomous Navigation:</strong> Implementing SLAM (Simultaneous Localization and Mapping) 
+                    for GPS-denied environments using LiDAR and camera fusion</li>
+                    <li><strong>Obstacle Detection:</strong> Real-time terrain analysis to avoid rocks and craters</li>
+                    <li><strong>Path Planning:</strong> Dynamic trajectory generation using ROS2 Nav2 stack</li>
+                    <li><strong>Sensor Integration:</strong> Fusing data from multiple sensors (IMU, encoders, cameras) 
+                    for robust state estimation</li>
+                </ul>
+
+                <h2>My Contributions</h2>
+                <p>As Software Lead, I:</p>
+                <ul>
+                    <li>Architected the ROS2 navigation stack with custom behavior trees</li>
+                    <li>Developed computer vision pipeline for autonomous excavation zone detection</li>
+                    <li>Implemented sensor fusion algorithms for localization accuracy within 10cm</li>
+                    <li>Integrated motor controllers (Spark Max) with CAN bus communication</li>
+                    <li>Set up Gazebo simulation environment for testing before hardware deployment</li>
+                </ul>
+
+                <h2>Technologies Used</h2>
+                <div class="tech-stack">
+                    <span class="tag">ROS2 Jazzy</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Gazebo</span>
+                    <span class="tag">Nav2</span>
+                    <span class="tag">LiDAR</span>
+                    <span class="tag">CAN Bus</span>
+                </div>
+
+                <h2>Project Images</h2>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Navigation Demo</div>
+                        <p>Autonomous path planning visualization</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Sensor Fusion</div>
+                        <p>Multi-sensor data integration</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Hardware</div>
+                        <p>Rover chassis and electronics</p>
+                    </div>
+                </div>
+
+                <h2>Results & Impact</h2>
+                <p>
+                    Successfully demonstrated autonomous excavation with 85% task completion rate in testing. 
+                    The navigation system achieved sub-10cm localization accuracy and obstacle avoidance 
+                    with 100% success rate during trials.
+                </p>
+
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/lunabotics" class="contact-button" target="_blank">View on GitHub</a>
+                    <!-- <a href="demo-video-link" class="contact-button" target="_blank">Watch Demo</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Alexander Halley</p>
+    </footer>
+</body>
+</html>
