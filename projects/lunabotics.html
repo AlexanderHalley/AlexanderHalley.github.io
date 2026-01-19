@@ -12,6 +12,7 @@
             <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Alexander Halley</a></h1>
             <ul class="nav-links">
                 <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
                 <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
@@ -24,79 +25,125 @@
             <a href="../index.html#projects" class="back-link">← Back to Projects</a>
             
             <h1>Autonomous Lunar Rover</h1>
-            <p class="project-meta">Northwestern Space Technology And Rocketry Society | Software Lead</p>
+            <p class="project-meta">Northwestern Space Technology And Rocketry Society (NUSTARS) | Software Lead</p>
             
             <div class="project-hero-image">
-                <img src="../images/projects/nustars/rover.png" alt="Lunabotics Rover">
-                <img src="../images/projects/nustars/rover_diagonal.png" alt="Lunabotics Rover side view">
+                <img src="../images/projects/nustars/rover_diagonal.png" alt="Lunabotics Rover CAD - Diagonal View">
             </div>
 
             <div class="project-description">
                 <h2>Overview</h2>
                 <p>
-                    Developing autonomous navigation and control systems for NASA's Lunabotics competition. 
+                    Leading autonomous navigation development for Northwestern's entry in NASA's Lunabotics competition. 
                     The rover must autonomously navigate simulated lunar terrain, excavate regolith, 
-                    and deposit it in designated zones - all without human intervention.
+                    and deposit it in designated zones—all without human intervention and without GPS.
+                </p>
+                <p>
+                    The competition simulates the challenges of lunar construction: fine abrasive dust, 
+                    communication delays, and the need for full autonomy. Our approach prioritizes 
+                    robust sensor fusion and simulation-validated software before hardware integration.
                 </p>
 
-                <h2>Technical Challenges</h2>
+                <h2>Technical Architecture</h2>
+                <p>
+                    The navigation system is built on ROS2 (Jazzy) using the Nav2 stack, chosen for its 
+                    modular architecture and active development community. Key design decisions include:
+                </p>
                 <ul>
-                    <li><strong>Autonomous Navigation:</strong> Implementing SLAM (Simultaneous Localization and Mapping) 
-                    for GPS-denied environments using LiDAR and camera fusion</li>
-                    <li><strong>Obstacle Detection:</strong> Real-time terrain analysis to avoid rocks and craters</li>
-                    <li><strong>Path Planning:</strong> Dynamic trajectory generation using ROS2 Nav2 stack</li>
-                    <li><strong>Sensor Integration:</strong> Fusing data from multiple sensors (IMU, encoders, cameras) 
-                    for robust state estimation</li>
+                    <li><strong>Localization:</strong> Fusing wheel encoder odometry, IMU data, and depth camera 
+                    input for state estimation in GPS-denied environments. Using robot_localization package 
+                    with extended Kalman filter for sensor fusion.</li>
+                    <li><strong>Path Planning:</strong> Nav2's behavior trees for mission logic, allowing 
+                    modular task sequencing (excavate → navigate → deposit → navigate → repeat).</li>
+                    <li><strong>Motor Control:</strong> REV Robotics Spark Flex controllers communicating 
+                    over CAN bus, providing closed-loop velocity control with encoder feedback.</li>
+                    <li><strong>Simulation-First Development:</strong> Full Gazebo simulation environment 
+                    mirroring competition arena, enabling software validation before hardware availability.</li>
                 </ul>
 
                 <h2>My Contributions</h2>
-                <p>As Software Lead, I:</p>
+                <p>As Software Lead, I am responsible for:</p>
                 <ul>
-                    <li>Architected the ROS2 navigation stack with custom behavior trees</li>
-                    <li>Developed computer vision pipeline for autonomous excavation zone detection</li>
-                    <li>Implemented sensor fusion algorithms for localization accuracy within 10cm</li>
-                    <li>Integrated motor controllers (Spark Max) with CAN bus communication</li>
-                    <li>Set up Gazebo simulation environment for testing before hardware deployment</li>
+                    <li>Architecting the overall ROS2 navigation stack and defining the sensor integration strategy</li>
+                    <li>Implementing CAN bus communication layer for Spark Flex motor controllers</li>
+                    <li>Building the Gazebo simulation environment for early software testing</li>
+                    <li>Coordinating between software, electrical, and mechanical subteams on interface requirements</li>
+                    <li>Developing computer vision pipeline for excavation zone detection (in progress)</li>
                 </ul>
 
-                <h2>Technologies Used</h2>
+                <h2>Technologies</h2>
                 <div class="tech-stack">
                     <span class="tag">ROS2 Jazzy</span>
+                    <span class="tag">Nav2</span>
                     <span class="tag">Python</span>
                     <span class="tag">C++</span>
-                    <span class="tag">OpenCV</span>
                     <span class="tag">Gazebo</span>
-                    <span class="tag">Nav2</span>
-                    <span class="tag">LiDAR</span>
+                    <span class="tag">OpenCV</span>
                     <span class="tag">CAN Bus</span>
+                    <span class="tag">Spark Flex</span>
                 </div>
 
-                <h2>Project Images</h2>
+                <h2>Design</h2>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <div class="placeholder-image">Navigation Demo</div>
-                        <p>Autonomous path planning visualization</p>
+                        <img src="../images/projects/nustars/rover.png" alt="Rover CAD Side View">
+                        <p>Side view showing drivetrain and excavation system</p>
                     </div>
                     <div class="gallery-item">
-                        <div class="placeholder-image">Sensor Fusion</div>
-                        <p>Multi-sensor data integration</p>
+                        <img src="../images/projects/nustars/rover_diagonal.png" alt="Rover CAD Diagonal View">
+                        <p>Overall rover assembly</p>
                     </div>
                     <div class="gallery-item">
-                        <div class="placeholder-image">Hardware</div>
-                        <p>Rover chassis and electronics</p>
+                        <img src="../images/projects/nustars/chassis.jpg" alt="Chassis">
+                        <p>Manufactured chassis</p>
                     </div>
                 </div>
 
-                <h2>Results & Impact</h2>
+                <h2>Build Progress</h2>
                 <p>
-                    Successfully demonstrated autonomous excavation with 85% task completion rate in testing. 
-                    The navigation system achieved sub-10cm localization accuracy and obstacle avoidance 
-                    with 100% success rate during trials.
+                    Videos documenting the rover's development:
                 </p>
+                <div class="video-gallery">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/shorts/2Hr40gZFLRE"></iframe>
+                        <p>4 motors working via direct velocity commands</p>
+                    </div>
+                    <div class="video-item">
+                         <iframe src="https://www.youtube.com/shorts/fuTSUJ9ygOY"></iframe>
+                        <p>4 motors working with Switch pro controller via off-board laptop for communications</p>
+                    </div>
+                </div>
+
+                <h2>Current Status</h2>
+                <p>
+                    The project is in active development ahead of the 2026 competition. The mechanical team 
+                    is manufacturing the chassis and digging system while I continue software development 
+                    in simulation. Current focus areas:
+                </p>
+                <ul>
+                    <li><strong>Completed:</strong> ROS2 architecture design, Gazebo simulation environment, 
+                    CAN communication protocol for Spark Flex controllers</li>
+                    <li><strong>In Progress:</strong> Ordering the LiDARs, excavation system design and manufacturing, testing the camera/IMU </li>
+                    <li><strong>Upcoming:</strong> Hardware integration testing once excavation system is complete, 
+                    full system validation on beach as a mockup arena </li>
+                </ul>
+
+                <h2>Technical Challenges</h2>
+                <p>
+                    Key challenges we're addressing:
+                </p>
+                <ul>
+                    <li><strong>GPS-Denied Localization:</strong> The competition arena prohibits GPS, 
+                    requiring robust odometry and visual localization. Wheel slip in loose regolith 
+                    makes pure encoder odometry unreliable.</li>
+                    <li><strong>Dust Mitigation:</strong> Lunar regolith simulant is abrasive and 
+                    electrostatically charged, posing challenges for sensors and mechanical systems.</li>
+                    <li><strong>Autonomous Decision Making:</strong> The rover must handle unexpected 
+                    obstacles and terrain variations (craters) without operator intervention.</li>
+                </ul>
 
                 <div class="project-links">
-                    <a href="https://github.com/yourusername/lunabotics" class="contact-button" target="_blank">View on GitHub</a>
-                    <!-- <a href="demo-video-link" class="contact-button" target="_blank">Watch Demo</a> -->
+                    <a href="../index.html#contact" class="contact-button">Contact Me</a>
                 </div>
             </div>
         </div>
