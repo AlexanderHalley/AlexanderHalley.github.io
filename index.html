@@ -12,6 +12,7 @@
             <h1 class="logo">Alexander Halley</h1>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -23,9 +24,12 @@
     <section id="hero">
         <div class="hero-content">
             <h1>Alexander Halley</h1>
-            <p class="subtitle">Biomedical Engineering & Computer Science</p>
-            <p class="tagline">Building autonomous systems and medical robotics solutions</p>
-            <a href="#projects" class="cta-button">View Projects</a>
+            <p class="subtitle">Biomedical Engineering · Robotics · Autonomous Systems</p>
+            <p class="tagline">Developing precision autonomous systems for medical and space applications</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-button">View Projects</a>
+                <a href="resume/Alexander_Halley_Resume.pdf" class="cta-button cta-secondary" target="_blank">Download Resume</a>
+            </div>
         </div>
     </section>
 
@@ -35,22 +39,95 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a sophomore at Northwestern University pursuing a double major in 
-                        Biomedical Engineering and Computer Science (3.91 GPA, Dean's List). 
-                        My work focuses on autonomous robotics, embedded systems, and surgical robotics.
+                        I'm a sophomore at Northwestern University in the accelerated BS/MS program in 
+                        Biomedical Engineering with a Mechanical Engineering concentration (3.93 GPA, Dean's List). 
+                        My work sits at the intersection of autonomous robotics and medical technology—building 
+                        systems that require the precision and reliability demanded by both surgical environments 
+                        and space exploration.
                     </p>
                     <p>
-                        Currently, I serve as Software Lead for Northwestern Space Technology And Rocketry 
-                        Society (NUSTARS), developing autonomous navigation systems for NASA Lunabotics 
-                        competition rovers. I'm also involved with the Motorcats Baja SAE team, 
-                        working on electronics and mechanical systems for off-road racing vehicles.
+                        As Software Lead for Northwestern's NASA Lunabotics team (NUSTARS), I architect 
+                        ROS2-based autonomous navigation systems that must operate reliably in GPS-denied 
+                        environments with sub-10cm accuracy. This same sensor fusion and precision control 
+                        expertise directly translates to surgical robotics, where millimeter-level accuracy 
+                        and robust failure handling are critical.
                     </p>
                     <p>
-                        My interest in surgical robotics stems from early exposure to medical device development 
-                        during my internship at Hypervision Surgical, a UK-based medical technology startup 
-                        specializing in hyperspectral imaging for surgical applications.
+                        My interest in medical robotics was shaped by an internship at Hypervision Surgical, 
+                        a UK medical technology startup developing hyperspectral imaging for real-time 
+                        surgical guidance. I'm drawn to smaller biomedical companies where I can contribute 
+                        meaningfully to systems that improve patient outcomes.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-timeline">
+                
+                <div class="experience-item">
+                    <div class="experience-date">June 2025 – Present</div>
+                    <div class="experience-content">
+                        <h3>Software Lead</h3>
+                        <p class="experience-org">Northwestern Space Technology And Rocketry Society (NUSTARS)</p>
+                        <p>
+                            Lead autonomous robotics development for NASA Lunabotics competition. Architecting 
+                            ROS2-based control systems for autonomous navigation and excavation in GPS-denied 
+                            lunar terrain simulation. Design CAN protocol communication for motor control and 
+                            sensor integration. Develop Gazebo/RViz2 simulation environments to diagnose issues 
+                            before hardware deployment.
+                        </p>
+                        <div class="experience-tags">
+                            <span class="tag">ROS2</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Gazebo</span>
+                            <span class="tag">Nav2</span>
+                            <span class="tag">CAN Bus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-date">Sept 2024 – Present</div>
+                    <div class="experience-content">
+                        <h3>Electronics & Powertrain Team Member</h3>
+                        <p class="experience-org">Northwestern Motorcats (Baja SAE)</p>
+                        <p>
+                            Engineer real-time data acquisition systems for competition off-road vehicle. 
+                            Implement hall-effect sensor integration for wheel speed monitoring and performance 
+                            analytics. Previously designed front powertrain guarding to SAE safety specifications.
+                        </p>
+                        <div class="experience-tags">
+                            <span class="tag">ESP32</span>
+                            <span class="tag">PCB Design</span>
+                            <span class="tag">CAN Protocol</span>
+                            <span class="tag">SolidWorks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-date">December 2022</div>
+                    <div class="experience-content">
+                        <h3>Engineering Intern</h3>
+                        <p class="experience-org">Hypervision Surgical</p>
+                        <p>
+                            UK-based medical technology startup developing hyperspectral imaging systems for 
+                            real-time surgical applications. Wrote technical documentation and user manuals 
+                            for imaging and measurement devices used in surgical environments.
+                        </p>
+                        <div class="experience-tags">
+                            <span class="tag">Medical Devices</span>
+                            <span class="tag">Technical Writing</span>
+                            <span class="tag">Imaging Systems</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -63,21 +140,21 @@
                 <div class="project-card">
                     <div class="project-image">
                         <!-- Add image: <img src="images/projects/nustars.jpg" alt="NUSTARS Rover"> -->
-                        <div class="placeholder-image">NUSTARS Project</div>
+                        <div class="placeholder-image">NUSTARS Rover</div>
                     </div>
                     <div class="project-content">
                         <h3>Autonomous Lunar Rover</h3>
                         <p class="project-role">Software Lead | NUSTARS</p>
                         <p>
-                            Developing autonomous navigation and control systems for NASA Lunabotics 
-                            competition. Implementing ROS2, computer vision, and sensor fusion for 
-                            lunar terrain navigation with sub-10cm localization accuracy.
+                            ROS2-based autonomous navigation for NASA Lunabotics competition. Implementing 
+                            SLAM, computer vision, and sensor fusion for GPS-denied terrain navigation 
+                            with sub-10cm localization accuracy and 85% autonomous task completion rate.
                         </p>
                         <div class="project-tags">
                             <span class="tag">ROS2</span>
                             <span class="tag">Python</span>
                             <span class="tag">Computer Vision</span>
-                            <span class="tag">Autonomous Systems</span>
+                            <span class="tag">Nav2</span>
                         </div>
                         <a href="projects/lunabotics.html" class="project-learn-more">Learn More →</a>
                     </div>
@@ -91,15 +168,15 @@
                         <h3>Data Acquisition System</h3>
                         <p class="project-role">Electronics Team | Motorcats Baja SAE</p>
                         <p>
-                            Designing and implementing comprehensive data acquisition systems for competition 
-                            off-road vehicle. Real-time sensor monitoring, telemetry transmission, and 
-                            performance analytics for suspension, drivetrain, and engine optimization.
+                            Comprehensive telemetry system for competition off-road vehicle. ESP32-based 
+                            real-time sensor monitoring with hall-effect wheel speed sensors, CAN bus 
+                            integration, and 915MHz LoRa wireless transmission to pit crew.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">ESP32</span>
                             <span class="tag">C/C++</span>
-                            <span class="tag">Sensor Integration</span>
-                            <span class="tag">Real-time Data</span>
+                            <span class="tag">CAN Bus</span>
+                            <span class="tag">PCB Design</span>
                         </div>
                         <a href="projects/baja_daq.html" class="project-learn-more">Learn More →</a>
                     </div>
@@ -113,15 +190,14 @@
                         <h3>Front Powertrain Guarding</h3>
                         <p class="project-role">Design & Manufacturing | Motorcats Baja SAE</p>
                         <p>
-                            Designed and fabricated protective guarding for front powertrain components to 
-                            meet SAE competition safety requirements. Optimized for impact resistance while 
-                            minimizing weight and maintaining serviceability for rapid pit maintenance.
+                            Designed and fabricated 6061-T6 aluminum protective guarding for front 
+                            powertrain components. Optimized for SAE safety compliance, impact resistance, 
+                            and weight minimization. Passed technical inspection on first attempt.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">CAD Design</span>
+                            <span class="tag">SolidWorks</span>
+                            <span class="tag">Sheet Metal</span>
                             <span class="tag">Manufacturing</span>
-                            <span class="tag">Material Selection</span>
-                            <span class="tag">SAE Standards</span>
                         </div>
                         <a href="projects/baja.html" class="project-learn-more">Learn More →</a>
                     </div>
@@ -137,21 +213,22 @@
             <div class="education-content">
                 <div class="degree-info">
                     <h3>Northwestern University</h3>
-                    <p class="degree-title">B.S. Biomedical Engineering & Computer Science (Double Major)</p>
-                    <p class="degree-meta">Expected 2027 | GPA: 3.91 | Dean's List</p>
+                    <p class="degree-title">B.S./M.S. Biomedical Engineering (Mechanical Engineering Concentration)</p>
+                    <p class="degree-meta">Accelerated Program · Expected 2027 · GPA: 3.93 · Dean's List</p>
                 </div>
                 
                 <div class="coursework-grid">
                     <div class="coursework-category">
                         <h4>Robotics & Controls</h4>
                         <ul>
+                            <li>Mechatronics</li>
+                            <li>Advanced Mechatronics</li>
+                            <li>Quadrotor Design & Control</li>
                             <li>Differential Equations & Dynamical Systems</li>
-                            <li>Linear Algebra</li>
-                            <li>Electromagnetic Physics</li>
                         </ul>
                     </div>
                     <div class="coursework-category">
-                        <h4>Software Engineering</h4>
+                        <h4>Software & Systems</h4>
                         <ul>
                             <li>Data Structures & Algorithms</li>
                             <li>Systems Programming (C/C++)</li>
@@ -161,11 +238,18 @@
                     <div class="coursework-category">
                         <h4>Biomedical Engineering</h4>
                         <ul>
+                            <li>Biomedical Signals & Circuits</li>
                             <li>Biomedical Instrumentation</li>
                             <li>Engineering Analysis & Design</li>
-                            <li>Material Properties & Analysis</li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="prior-education">
+                    <h4>Prior Education</h4>
+                    <p><strong>Westminster School</strong> · London, England · Class of 2024</p>
+                    <p>A-Levels: A* in Mathematics, Further Mathematics, Chemistry, French, Electronics; A in Biology</p>
+                    <p>Electronics Student of Year Prize (2022, 2023)</p>
                 </div>
             </div>
         </div>
@@ -187,30 +271,34 @@
                 <div class="skill-category">
                     <h3>Robotics</h3>
                     <ul>
-                        <li>ROS2</li>
+                        <li>ROS2 / Nav2</li>
                         <li>Gazebo Simulation</li>
                         <li>Autonomous Navigation</li>
-                        <li>Sensor Integration</li>
+                        <li>Sensor Fusion</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Hardware</h3>
                     <ul>
                         <li>Embedded Systems</li>
-                        <li>PCB Design</li>
+                        <li>PCB Design (KiCad)</li>
                         <li>Motor Control</li>
-                        <li>CAN Bus</li>
+                        <li>CAN Bus Protocol</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Tools</h3>
                     <ul>
                         <li>Git/GitHub</li>
-                        <li>CAD Software</li>
-                        <li>Valgrind</li>
+                        <li>SolidWorks CAD</li>
+                        <li>Linux (Ubuntu)</li>
                         <li>3D Printing</li>
                     </ul>
                 </div>
+            </div>
+            <div class="languages-section">
+                <h3>Languages</h3>
+                <p>French (Native) · English (Native) · Spanish (Beginner)</p>
             </div>
         </div>
     </section>
@@ -219,11 +307,15 @@
         <div class="container">
             <h2>Get In Touch</h2>
             <div class="contact-content">
-                <p>I'm interested in surgical robotics, autonomous systems, and medical device development.</p>
+                <p>
+                    I'm seeking Summer 2026 internships in surgical robotics, medical device development, 
+                    and autonomous systems. Particularly interested in smaller biomedical companies.
+                </p>
                 <div class="contact-links">
                     <a href="mailto:alexanderhalley2023@u.northwestern.edu" class="contact-button">Email</a>
                     <a href="https://github.com/AlexanderHalley" class="contact-button" target="_blank">GitHub</a>
                     <a href="https://linkedin.com/in/alexander-halley-9a2354249/" class="contact-button" target="_blank">LinkedIn</a>
+                    <a href="resume/Alexander_Halley_Resume.pdf" class="contact-button" target="_blank">Resume (PDF)</a>
                 </div>
             </div>
         </div>
