@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baja Data Acquisition System - Alexander Halley</title>
+    <title>Baja SAE Data Acquisition System - Alexander Halley</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -12,6 +12,7 @@
             <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Alexander Halley</a></h1>
             <ul class="nav-links">
                 <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
                 <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
@@ -24,101 +25,105 @@
             <a href="../index.html#projects" class="back-link">← Back to Projects</a>
             
             <h1>Baja SAE Data Acquisition System</h1>
-            <p class="project-meta">Motorcats Baja SAE | Electronics Team</p>
+            <p class="project-meta">Northwestern Motorcats | Electronics Team</p>
             
             <div class="project-hero-image">
-                <!-- <img src="../images/projects/baja-daq-main.jpg" alt="DAQ System"> -->
-                <div class="placeholder-image">DAQ Dashboard Interface</div>
+                <img src="../images/projects/baja-daq/HallPCB_schematic.png" alt="DAQ PCB Layout">
             </div>
 
             <div class="project-description">
                 <h2>Overview</h2>
                 <p>
-                    Developed a comprehensive data acquisition and telemetry system for the Motorcats Baja SAE 
-                    competition vehicle. The system monitors critical vehicle parameters in real-time, enabling 
-                    data-driven optimization of suspension tuning, powertrain performance, and driver feedback 
-                    during testing and competition events.
+                    Designing a data acquisition and telemetry system for the Motorcats Baja SAE 
+                    competition vehicle. The system will monitor wheel speeds in real-time, enabling 
+                    data-driven analysis of drivetrain performance and vehicle dynamics during 
+                    testing and competition.
+                </p>
+                <p>
+                    This is the team's first dedicated DAQ system, replacing manual observation 
+                    with quantitative data collection.
                 </p>
 
-                <h2>System Requirements</h2>
+                <h2>System Design</h2>
+                <p>
+                    The system is built around an ESP32 microcontroller, chosen for its dual-core 
+                    processor, and low power consumption. The architecture prioritizes reliability in harsh off-road conditions.
+                </p>
                 <ul>
-                    <li><strong>Data Logging:</strong> Continuous recording at 100Hz for post-event analysis of 
-                    suspension travel, wheel speeds.</li>
-                    <li><strong>Wireless Telemetry:</strong> Live data streaming to pit crew during competition runs</li>
-                    <li><strong>Rugged Design:</strong> waterproofing and vibration resistance for off-road conditions</li>
-                    <li><strong>Low Power:</strong> 8+ hour battery life for full competition day without recharging</li>
+                    <li><strong>Wheel Speed Sensing:</strong> Four hall-effect sensors (one per wheel) 
+                    detect magnetic targets on the wheel hubs, providing pulse signals proportional 
+                    to wheel rotation speed.</li>
+                    <li><strong>Signal Conditioning:</strong> Custom PCB with input protection, 
+                    pull-up resistors, and filtering to clean up sensor signals before they reach 
+                    the microcontroller.</li>
+                    <li><strong>Local Logging:</strong> SD card storage for high-frequency data 
+                    capture, allowing detailed post-run analysis.</li>
                 </ul>
 
-                <h2>Hardware Architecture</h2>
+                <h2>PCB Design</h2>
                 <p>
-                    Built around a ESP32 microcontroller for sensor data collection, with a CAN transceiver 
-                    for communication with engine ECU and powertrain controllers. Custom PCB design 
-                    includes signal conditioning circuits for analog sensors, voltage regulators for stable 5V/3.3V 
-                    power rails, and automotive-grade connectors for reliability.
+                    Designed in KiCad with focus on noise immunity and manufacturability:
                 </p>
-                <p>
-                    Sensor suite includes: wheel speed Hall sensors (4x).
-                </p>
-
-                <h2>Software Development</h2>
-                <p>
-                    Implemented embedded firmware in C/C++ using interrupt-driven architecture for deterministic 
-                    real-time performance. 
-                </p>
-                <p>
-                    Telemetry system uses 915MHz LoRa radio for long-range wireless communication to pit station. 
-                </p>
-
-                <h2>Key Technical Challenges</h2>
                 <ul>
-                    <li><strong>Noise Immunity:</strong> Electrical noise from ignition system and motors </li>
-                    <li><strong>Vibration Hardening:</strong> needs to survive 6+ hours of off-road abuse</li>
-                    <li><strong>Power Management:</strong> Designed smart power sequencing to protect microcontroller 
-                    during engine cranking voltage sags</li>
-                    <li><strong>Data Synchronization:</strong> Implemented GPS time-stamping for precise correlation 
-                    of sensor data with video footage and lap timing</li>
+                    <li>Separate analog and digital ground planes to reduce noise coupling</li>
+                    <li>Input protection on all sensor channels </li>
+                    <li>Automotive-rated connectors for vibration resistance</li>
+                    <li>Mounting holes aligned with team's standard enclosure</li>
                 </ul>
 
-                <h2>Technologies Used</h2>
+                <h2>My Contributions</h2>
+                <ul>
+                    <li>Schematic design and component selection for signal conditioning circuits</li>
+                    <li>PCB layout in KiCad, including design rule checks for manufacturer constraints</li>
+                    <li>Code for interrupt-driven sensor reading</li>
+                    <li>Documentation of system requirements and interface specifications</li>
+                </ul>
+
+                <h2>Technologies</h2>
                 <div class="tech-stack">
                     <span class="tag">ESP32</span>
+                    <span class="tag">KiCad</span>
                     <span class="tag">C/C++</span>
-                    <span class="tag">CAN Bus</span>
+                    <span class="tag">Hall-Effect Sensors</span>
                     <span class="tag">PCB Design</span>
-                    <span class="tag">Real-Time Systems</span>
-                    <span class="tag">Signal Processing</span>
                 </div>
 
-                <h2>Data Analysis & Insights</h2>
-                <p>
-                    Post-processing pipeline analyzes logged data to extract key performance metrics. Developed 
-                    automated scripts to calculate linear velocity, identify wheel slip events, 
-                    and correlate engine RPM with vehicle speed to optimize eCVT tuning.
-                </p>
-
-                <h2>Project Images</h2>
+                <h2>Design Artifacts</h2>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <img src="../images/projects/baja-daq/HallPCB_schematic.png" alt="PCB_schematic">
-                        <p>Custom sensor interface board design</p>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="placeholder-image">Live Dashboard</div>
-                        <p>Real-time telemetry monitoring</p>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="placeholder-image">Data Plot</div>
-                        <p>Suspension travel analysis from competition run</p>
+                        <img src="../images/projects/baja-daq/HallPCB_schematic.png" alt="PCB Schematic">
+                        <p>Sensor interface schematic</p>
                     </div>
                 </div>
 
-                <h2>Results & Impact</h2>
+                <h2>Current Status</h2>
                 <p>
-                    It works
+                    The system is in the design phase, with PCB layout complete and ready for 
+                    manufacturing. Next steps:
                 </p>
+                <ul>
+                    <li><strong>Completed:</strong> Schematic design, component selection, PCB layout, 
+                    design review with team</li>
+                    <li><strong>Next:</strong> PCB fabrication and assembly, bench testing with 
+                    simulated sensor inputs</li>
+                    <li><strong>Upcoming:</strong> Vehicle integration, field testing, firmware 
+                    tuning based on real-world data</li>
+                </ul>
+
+                <h2>Design Challenges</h2>
+                <p>
+                    Key challenges addressed in the design:
+                </p>
+                <ul>
+                    <li><strong>Electrical Noise:</strong> The vehicle's ignition system and 
+                    unshielded wiring create significant EMI. Input filtering and shielded 
+                    cables mitigate this.</li>
+                    <li><strong>Environmental Durability:</strong> The system must survive mud, 
+                    water, vibration, and impacts. Conformal coating and sealed connectors 
+                    provide protection.</li>
+                </ul>
 
                 <div class="project-links">
-                    <a href="https://github.com/yourusername/baja-daq" class="contact-button" target="_blank">View on GitHub</a>
                     <a href="../index.html#contact" class="contact-button">Contact Me</a>
                 </div>
             </div>
