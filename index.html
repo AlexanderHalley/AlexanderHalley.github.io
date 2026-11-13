@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexander Halley - Robotics & Biomedical Engineering</title>
+    <title>Alexander Halley - Robotic OCT & Biomedical Engineering</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,11 +24,11 @@
     <section id="hero">
         <div class="hero-content">
             <h1>Alexander Halley</h1>
-            <p class="subtitle">Biomedical Engineering · Robotics · Autonomous Systems</p>
-            <p class="tagline">Developing autonomous systems for medical and space applications</p>
+            <p class="subtitle">Biomedical Engineering · Robotic OCT · Autonomous Systems</p>
+            <p class="tagline">Bringing robotics and sensor fusion to optical medical imaging</p>
             <div class="hero-buttons">
                 <a href="#projects" class="cta-button">View Projects</a>
-                <a href="https://drive.google.com/file/d/18qAuwkwxzYKGoVfMySXIFR-qFdnsAC4X/view?usp=drive_link" class="cta-button cta-secondary" target="_blank">Download Resume</a>
+                <a href="Alexander_Halley_CV.pdf" class="cta-button cta-secondary" target="_blank">Download CV</a>
             </div>
         </div>
     </section>
@@ -39,23 +39,22 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a sophomore at Northwestern University doing a BS in 
-                        Biomedical Engineering (3.93 GPA, Dean's List every quarter). 
-                        My work currently sits on the more electrical/software side of engineering but 
-                        I want to transition to more biomedical focused roles in the future.
+                        I'm a senior at Northwestern University studying Biomedical Engineering
+                        (3.96 GPA, Dean's List every quarter). My research interest is
+                        <strong>robotic optical coherence tomography (OCT)</strong>: combining robotics,
+                        sensor fusion and image reconstruction to make optical medical imaging more capable.
                     </p>
                     <p>
-                        As Software Lead for Northwestern's NASA Lunabotics team (NUSTARS), I architect 
-                        ROS2-based autonomous navigation systems that must operate reliably in GPS-denied. 
-                        As the rover is being currently developed and we are a first year team, I am working 
-                        on a lot of the low-level systems including CAN protocol motor control, ROS2 integration
-                        and camera/Lidar sensor fusion.
+                        Since March 2026 I've been an undergraduate researcher in the Functional Optical
+                        Imaging Laboratory (FOIL) under Prof. Hao F. Zhang. I started on cytotoxicity work
+                        for a biomedical device, then moved to building its Bluetooth communication, and
+                        I'm now working on stitching OCT images acquired along a circular scan path.
                     </p>
                     <p>
-                        My interest in medical robotics was shaped by an internship at Hypervision Surgical, 
-                        a UK medical technology startup developing hyperspectral imaging for real-time 
-                        surgical guidance. I'm drawn to smaller biomedical companies where I can contribute 
-                        meaningfully to projects with a cross-disciplinary perspective.
+                        Outside the lab, I'm Software Lead for Northwestern's NASA Lunabotics team (NUSTARS),
+                        where I lead ROS2/Nav2 autonomy for a lunar excavation robot. Our first-year team won
+                        the 2026 Nova Award for Stellar Systems Engineering. This past summer I was a Robotics
+                        Software Intern at Familiar Machines &amp; Magic, writing IMU drivers and camera managers.
                     </p>
                 </div>
             </div>
@@ -64,46 +63,87 @@
 
     <section id="experience">
         <div class="container">
-            <h2>Experience</h2>
+            <h2>Research &amp; Experience</h2>
             <div class="experience-timeline">
-                
+
+                <div class="experience-item">
+                    <div class="experience-date">March 2026 - Present</div>
+                    <div class="experience-content">
+                        <h3>Undergraduate Researcher</h3>
+                        <p class="experience-org">Functional Optical Imaging Laboratory (FOIL), Northwestern University · PI: Prof. Hao F. Zhang</p>
+                        <p>
+                            <strong>Circular OCT image stitching:</strong> developing methods to stitch optical
+                            coherence tomography images acquired along a circular scan path into a single
+                            continuous image.
+                        </p>
+                        <p>
+                            Developed Bluetooth communication for a biomedical device, after initially running
+                            cytotoxicity studies for it. Trained in cell culture and animal handling techniques.
+                        </p>
+                        <div class="experience-tags">
+                            <span class="tag">OCT</span>
+                            <span class="tag">Image Stitching</span>
+                            <span class="tag">Bluetooth</span>
+                            <span class="tag">Cell Culture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-date">Summer 2026</div>
+                    <div class="experience-content">
+                        <h3>Robotics Software Intern</h3>
+                        <p class="experience-org">Familiar Machines &amp; Magic · Boston, MA</p>
+                        <p>
+                            Developed IMU drivers and camera managers for a robotics startup's platform, unifying
+                            three cameras behind a common interface that other services could call easily. Worked
+                            on IMU-camera sensor fusion and validated the drivers and camera managers in
+                            NVIDIA Isaac Sim before deployment on hardware.
+                        </p>
+                        <div class="experience-tags">
+                            <span class="tag">Drivers</span>
+                            <span class="tag">Sensor Fusion</span>
+                            <span class="tag">Isaac Sim</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="experience-item">
                     <div class="experience-date">June 2025 - Present</div>
                     <div class="experience-content">
                         <h3>Software Lead</h3>
                         <p class="experience-org">Northwestern Space Technology And Rocketry Society (NUSTARS)</p>
                         <p>
-                            Lead autonomous robotics development for NASA Lunabotics competition. Architecting 
-                            ROS2-based control systems for autonomous navigation and excavation in GPS-denied 
-                            lunar terrain simulation. Design CAN protocol communication for motor control and 
-                            sensor integration. Develop Gazebo/RViz2 simulation environments to diagnose issues 
-                            before hardware deployment.
+                            Lead autonomous navigation for a lunar excavation robot in the NASA Lunabotics
+                            competition using ROS2 and Nav2. Designed the sensor-fusion architecture combining
+                            depth cameras, IMUs and wheel encoders for GPS-denied localization. Validate and
+                            improve autonomy in simulation (Gazebo; NVIDIA Isaac Sim for the 2026-27 season).
+                            Our team won the NASA Lunabotics 2026 <strong>Nova Award for Stellar Systems
+                            Engineering by a First-Year Team</strong>.
                         </p>
                         <div class="experience-tags">
                             <span class="tag">ROS2</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Gazebo</span>
                             <span class="tag">Nav2</span>
+                            <span class="tag">Isaac Sim</span>
+                            <span class="tag">Gazebo</span>
                             <span class="tag">CAN Bus</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="experience-item">
-                    <div class="experience-date">Sept 2024 - Present</div>
+                    <div class="experience-date">Sept 2025 - Present</div>
                     <div class="experience-content">
-                        <h3>Electronics & Powertrain Team Member</h3>
+                        <h3>Electronics Lead Member</h3>
                         <p class="experience-org">Northwestern Motorcats (Baja SAE)</p>
                         <p>
-                            Engineer real-time data acquisition systems for competition off-road vehicle. 
-                            Implement hall-effect sensor integration for wheel speed monitoring and performance 
-                            analytics. Previously designed front powertrain guarding to SAE safety specifications.
+                            Lead and review the system architecture for the team's electronics systems and
+                            design custom sensor PCBs in KiCad. Previously on the powertrain sub-team (from
+                            Sept 2024), designing front powertrain guarding in SolidWorks and machining parts.
                         </p>
                         <div class="experience-tags">
-                            <span class="tag">ESP32</span>
+                            <span class="tag">System Architecture</span>
                             <span class="tag">PCB Design</span>
-                            <span class="tag">CAN Protocol</span>
                             <span class="tag">SolidWorks</span>
                         </div>
                     </div>
@@ -112,18 +152,12 @@
                 <div class="experience-item">
                     <div class="experience-date">December 2022</div>
                     <div class="experience-content">
-                        <h3>Intern</h3>
-                        <p class="experience-org">Hypervision Surgical</p>
+                        <h3>Engineering Intern</h3>
+                        <p class="experience-org">Hypervision Surgical · London, UK</p>
                         <p>
-                            UK-based medical technology startup developing hyperspectral imaging systems for 
-                            real-time surgical applications. Wrote documentation and user manuals 
-                            for imaging and measurement devices used in surgical environments.
+                            Wrote the user manual for a latency-measurement device at a hyperspectral
+                            surgical-imaging startup.
                         </p>
-                        <div class="experience-tags">
-                            <span class="tag">Medical Devices</span>
-                            <span class="tag">Technical Writing</span>
-                            <span class="tag">Imaging Systems</span>
-                        </div>
                     </div>
                 </div>
 
@@ -135,7 +169,27 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image">Anoscopy Workstation</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Low-Cost High-Resolution Anoscopy Workstation</h3>
+                        <p class="project-role">Senior Capstone Design | Northwestern BME</p>
+                        <p>
+                            Designing a low-cost, high-resolution imaging workstation for anoscopy. The current
+                            prototype pairs a Raspberry Pi HQ Camera and zoom lens with a Raspberry Pi 5, an
+                            integrated display and a stand.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Medical Imaging</span>
+                            <span class="tag">Raspberry Pi</span>
+                            <span class="tag">Optics</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="images/projects/nustars/rover.png" alt="NUSTARS Rover">
@@ -144,8 +198,9 @@
                         <h3>Autonomous Lunar Rover</h3>
                         <p class="project-role">Software/LV electrical Lead | NUSTARS</p>
                         <p>
-                            ROS2-based autonomous navigation for NASA Lunabotics competition. Implementing 
-                            SLAM, computer vision, and sensor fusion for GPS-denied terrain navigation.
+                            ROS2-based autonomous navigation for NASA Lunabotics competition, with sensor fusion
+                            for GPS-denied terrain and simulation in Gazebo and Isaac Sim. Winner of the 2026
+                            Nova Award for Stellar Systems Engineering by a First-Year Team.
                         </p>
                         <div class="project-tags">
                             <span class="tag">ROS2</span>
@@ -211,7 +266,7 @@
                 <div class="degree-info">
                     <h3>Northwestern University</h3>
                     <p class="degree-title">B.S. Biomedical Engineering </p>
-                    <p class="degree-meta">Expected 2027 · GPA: 3.93 · Dean's List</p>
+                    <p class="degree-meta">Expected June 2027 · GPA: 3.96 · Dean's List (every quarter)</p>
                 </div>
                 
                 <div class="coursework-grid">
@@ -234,8 +289,11 @@
                     <div class="coursework-category">
                         <h4>Biomedical Engineering</h4>
                         <ul>
+                            <li>Capstone Design</li>
                             <li>Biomedical Signals & Circuits x2</li>
                             <li>Biomedical Instrumentation</li>
+                            <li>Transport Fundamentals</li>
+                            <li>Biomechanics</li>
                             <li>Engineering Analysis & Design</li>
                         </ul>
                     </div>
@@ -268,15 +326,25 @@
                     <h3>Robotics</h3>
                     <ul>
                         <li>ROS2 / Nav2</li>
-                        <li>Gazebo Simulation</li>
-                        <li>Autonomous Navigation</li>
+                        <li>NVIDIA Isaac Sim / Gazebo</li>
+                        <li>IMU &amp; Camera Drivers</li>
                         <li>Sensor Fusion</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Imaging &amp; Lab</h3>
+                    <ul>
+                        <li>Optical Coherence Tomography</li>
+                        <li>Image Stitching</li>
+                        <li>Cell Culture &amp; Cytotoxicity</li>
+                        <li>Animal Handling</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Hardware</h3>
                     <ul>
                         <li>Embedded Systems</li>
+                        <li>Bluetooth</li>
                         <li>PCB Design (KiCad)</li>
                         <li>Motor Control</li>
                         <li>CAN Bus Protocol</li>
@@ -304,21 +372,21 @@
             <h2>Get In Touch</h2>
             <div class="contact-content">
                 <p>
-                    I'm seeking Summer 2026 internships in surgical robotics, medical device development, 
-                    and autonomous systems. Particularly interested in smaller biomedical companies.
+                    I'm applying to PhD programs starting Fall 2027, focused on robotic OCT and
+                    robot-assisted medical imaging. I'd love to hear from labs working in this space.
                 </p>
                 <div class="contact-links">
                     <a href="mailto:alexanderhalley2023@u.northwestern.edu" class="contact-button">Email</a>
                     <a href="https://github.com/AlexanderHalley" class="contact-button" target="_blank">GitHub</a>
                     <a href="https://linkedin.com/in/alexander-halley-9a2354249/" class="contact-button" target="_blank">LinkedIn</a>
-                    <a href="https://drive.google.com/file/d/18qAuwkwxzYKGoVfMySXIFR-qFdnsAC4X/view?usp=drive_link" class="contact-button" target="_blank">Resume (PDF)</a>
+                    <a href="Alexander_Halley_CV.pdf" class="contact-button" target="_blank">CV (PDF)</a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Alexander Halley</p>
+        <p>&copy; 2026 Alexander Halley</p>
     </footer>
 </body>
 </html>
